@@ -1,7 +1,8 @@
 # setup_db.py  —  run ONCE to make library.db with 3 books
+from pathlib import Path
 import sqlite3
 
-conn = sqlite3.connect("library.db")
+conn = sqlite3.connect(Path(__file__).resolve().with_name("library.db"))
 conn.execute("DROP TABLE IF EXISTS books")
 conn.execute("""
     CREATE TABLE books (

@@ -1,9 +1,10 @@
 # models.py  —  M = MODEL
 # The data and the rules. The data lives in SQLite.
 
+from pathlib import Path
 import sqlite3
 
-DB = "library.db"
+DB = Path(__file__).resolve().with_name("library.db")
 
 
 class Book:

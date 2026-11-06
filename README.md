@@ -51,8 +51,10 @@ curl -i -X DELETE http://127.0.0.1:5000/api/books/3
 | File | Layer | Job |
 |---|---|---|
 | `setup_db.py` | — | Copied from Week 10 |
-| `models.py` | Model | Copied from Week 10, **not changed** |
+| `models.py` | Model | Shared with Week 10; both copies stay identical |
 | `main.py` | View + Controller | The phone screen and the event functions (no SQL) |
+
+Both `models.py` copies open the `library.db` beside the model file. This keeps the mobile app pointed at its project database even when Flet runs it from a separate working directory.
 
 ### Run it in VS Code
 
