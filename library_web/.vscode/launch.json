@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Make the database (setup_db.py)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/setup_db.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run Flask app",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "cwd": "${workspaceFolder}",
+      "args": ["--app", "app", "run", "--debug"],
+      "jinja": true,
+      "console": "integratedTerminal"
+    }
+  ]
+}
